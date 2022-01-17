@@ -1,0 +1,85 @@
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    background-image: url("../../public/loginbackground.jpeg");
+    color: #333;
+    font-size: 16px;
+    direction: ltr;
+    display: block;
+}
+
+.root {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.login-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5) 0px, rgba(0, 0, 0, 0) 100%);
+    width: 100%;
+    height: 90px;
+    position: absolute;
+    display: block;
+    direction: ltr;
+    top: 0;
+
+}
+
+.logo-url {
+    vertical-align: middle;
+    direction: ltr;
+    line-height: 90px;
+    margin-left: 3%;
+}
+
+.login-svg-logo {
+    height: 45px;
+    width: 167px;
+    vertical-align: middle;
+    fill: #e50914;
+}
+
+.login-body {
+    direction: ltr;
+    display: block;
+    margin: 0 auto -236px;
+    padding: 0 5%;
+    max-width: 450px;
+    min-height: 100vh;
+}
+
+.login-body::before{
+    content: "";
+    height: 91px;
+    display: block;
+}
+
+.login-content {
+    background-color: rgba(0,0,0,.75);
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 667px;
+    margin: 0 0 90px;
+    min-height: 660px;
+    min-width: 380px;
+    padding: 60px 68px 40px;
+    display: flex;
+    direction: ltr;
+    width: 100%;
+    flex-direction: column;
+}
+
+.login-form-main {
+    direction: ltr;
+    display: block;
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+#title_form {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
