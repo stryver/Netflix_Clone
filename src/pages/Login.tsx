@@ -1,7 +1,23 @@
 import React from "react";
 import "../css/Login.css";
+import {
+  Button,
+  Checkbox,
+  Input,
+  FormGroup,
+  FormControlLabel,
+  Typography,
+} from "@mui/material";
 
 function Login() {
+  const [email, setEmail] = React.useState<string>("");
+  const [password, setPassword] = React.useState<string>("");
+
+  const submit = async () => {
+    //CALL API
+    return null;
+  };
+
   return (
     <div className={"root"}>
       <div className={"login-header"}>
@@ -19,12 +35,66 @@ function Login() {
         <div>
           <div className={"login-content"}>
             <div className={"login-form-main"}>
-              <h1 id={"title_form"}>S'indentifier</h1>
+              <h1 id={"title_form"}>S'identifier</h1>
+              <Input
+                placeholder={"Email ou numéro de téléphone"}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                style={{
+                  backgroundColor: "rgb(51,51,51)",
+                  width: "100%",
+                  borderRadius: "4px",
+                  height: "50px",
+                  color: "white",
+                  paddingLeft: 20,
+                  marginBottom: 16,
+                }}
+              />
+              <Input
+                placeholder={"Mot de passe"}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                style={{
+                  backgroundColor: "rgb(51,51,51)",
+                  width: "100%",
+                  borderRadius: "4px",
+                  height: "50px",
+                  color: "white",
+                  paddingLeft: 20,
+                }}
+              />
+              <Button
+                onClick={() => submit()}
+                style={{
+                  backgroundColor: "rgb(229, 9, 20)",
+                  marginTop: 40,
+                  color: "white",
+                  width: "100%",
+                  height: "48px",
+                  fontSize: 16,
+                  fontFamily: "Helvetica Neue",
+                  textTransform: "none",
+                }}
+              >
+                S'identifier
+              </Button>
+              <FormGroup style={{ display: "flex" }}>
+                <FormControlLabel
+                  style={{ color: "white" }}
+                  control={
+                    <Checkbox style={{ color: "white", borderRadius: "4px" }} />
+                  }
+                  label={
+                    <Typography style={{ fontSize: 13 }}>
+                      Se souvenir de moi
+                    </Typography>
+                  }
+                />
+              </FormGroup>
             </div>
           </div>
         </div>
       </div>
-      <div></div>
     </div>
   );
 }

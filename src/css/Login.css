@@ -77,6 +77,10 @@ body {
     font-size: 16px;
 }
 
+.login-form-footer {
+    background-color: green;
+}
+
 #title_form {
     color: white;
     font-size: 32px;
